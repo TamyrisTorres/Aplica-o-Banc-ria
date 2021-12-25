@@ -10,7 +10,7 @@ public class ContaUnica {
         int opcao;
         double valor;
 
-        System.out.println("Digite o titular da conta: ");
+        System.out.println("Digite o nome do titular da conta: ");
         aux = leTecleado.nextLine();
 
         ContaCorrente c1 = new ContaCorrente(aux);
