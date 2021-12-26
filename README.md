@@ -1,9 +1,10 @@
 # Aplicacão Bancária utilizando Java
 
-Aplicação Bancária que funciona como um Conta Corrente:
+Aplicação Bancária - Conta Corrente:
 
+Cria Conta
 Verifica Saldo;
 Fazer Depósito; 
 Fazer Saque;
-Calcular juros;
+Transferi valores;
 Sair do aplicativo.
