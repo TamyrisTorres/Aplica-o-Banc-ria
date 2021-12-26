@@ -3,7 +3,7 @@ import entities.ContaCorrente;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ContaUnica {
+public class ContasMultiplas {
 
     public static void main(String[] args) {
         Scanner leTecleado = new Scanner(System.in);
