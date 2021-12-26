@@ -61,4 +61,22 @@ public class ContaCorrente {
         System.out.println("- R$ "+ this.saldo);
     }
 
+    public void Transferir(ContaCorrente Dest, double Valor){
+        System.out.println("");
+        System.out.println("--- Realizando Transferência ---");
+        System.out.println("- Saldo Anterior Origem: "+ this.saldo);
+        System.out.println("- Saldo Anterior Destino: "+ Dest.saldo);
+
+        if(Valor <= this.saldo){
+            this.saldo -= Valor;
+            Dest.saldo += Valor;
+            System.out.println("- Saldo Posterior Origem: "+ this.saldo);
+            System.out.println("- Saldo Posterior Destino: "+ Dest.saldo);
+        }
+        else {
+            System.out.println("-- Saldo Insuficiente --");
+        }
+        System.out.println("--- Fim da Transferência! ---");
+    }
+
 }

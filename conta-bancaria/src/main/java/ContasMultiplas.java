@@ -8,10 +8,10 @@ public class ContasMultiplas {
     public static void main(String[] args) {
         Scanner leTecleado = new Scanner(System.in);
         String aux;
-        int opcao, numero;
+        int opcao, numero, numero2;
         double valor;
         ArrayList<ContaCorrente> lc = new ArrayList();
-        ContaCorrente c1;
+        ContaCorrente c1, c2;
 
         do {
             System.out.println("--- MENU ---");
@@ -20,6 +20,7 @@ public class ContasMultiplas {
             System.out.println("(3) Depósito");
             System.out.println("(4) Saldo Atualizado");
             System.out.println("(5) Saque");
+            System.out.println("(6) Transferir");
             System.out.println("(0) Sair");
 
             System.out.println("Digite a opção desejada: ");
@@ -73,7 +74,20 @@ public class ContasMultiplas {
 
                     c1.Sacar(valor);
                     break;
+                case 6:
+                    System.out.println("Digite o número da conta de origem: ");
+                    numero = leTecleado.nextInt();
+                    c1 = lc.get(numero-1);
 
+                    System.out.println("Digite o número da conta de destino: ");
+                    numero2 = leTecleado.nextInt();
+                    c2 = lc.get(numero2-1);
+
+                    System.out.println("Digite o valor da Transferência: ");
+                    valor = leTecleado.nextDouble();
+
+                    c1.Transferir(c2, valor);
+                    break;
                 default:
                     if(opcao != 0)
                         System.out.println("Opção Inválida");
