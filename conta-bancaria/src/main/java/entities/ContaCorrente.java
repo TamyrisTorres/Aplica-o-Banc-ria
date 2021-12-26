@@ -47,12 +47,18 @@ public class ContaCorrente {
 
         if(Valor <= this.saldo){
             this.saldo -= Valor;
-            System.out.println("- Saldo Posterior --"+ this.saldo);
+            System.out.println("- Saldo Posterior: "+ this.saldo);
         }
         else {
             System.out.println("-- Saldo Insuficiente --");
         }
         System.out.println("--- Fim Saque ---");
+    }
+
+    public void Mostrar(){
+        System.out.println("");
+        System.out.println("--- Saldo Atualizado---");
+        System.out.println("- R$ "+ this.saldo);
     }
 
 }
